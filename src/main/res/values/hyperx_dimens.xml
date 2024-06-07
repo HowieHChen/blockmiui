@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="hyperx_switch_track_corner_radius">36dp</dimen>
+    <dimen name="hyperx_switch_track_horizontal_padding">0dp</dimen>
+    <dimen name="hyperx_switch_track_vertical_padding">2dp</dimen>
+    <dimen name="hyperx_switch_track_width">49dp</dimen>
+    <dimen name="hyperx_switch_track_height">28dp</dimen>
+    <dimen name="hyperx_switch_thumb_size_normal">20dp</dimen>
+    <dimen name="hyperx_switch_thumb_size_pressed">22dp</dimen>
+    <dimen name="hyperx_switch_thumb_horizontal_padding_normal">4dp</dimen>
+    <dimen name="hyperx_switch_thumb_horizontal_padding_pressed">3dp</dimen>
+    <dimen name="hyperx_switch_thumb_vertical_padding_normal">4dp</dimen>
+    <dimen name="hyperx_switch_thumb_vertical_padding_pressed">3dp</dimen>
+
+</resources>

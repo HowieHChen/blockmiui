@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hyperx_color_white">#ffffffff</color>
+
+    <color name="hyperx_divider_line">#27000000</color>
+
+    <color name="hyperx_switch_track_on">#3482ff</color>
+    <color name="hyperx_switch_track_off">#19000000</color>
+    <color name="hyperx_switch_thumb_off_normal_color">@color/hyperx_color_white</color>
+    <color name="hyperx_switch_thumb_off_pressed_color">@color/hyperx_color_white</color>
+    <color name="hyperx_switch_thumb_on_normal_color">@color/hyperx_color_white</color>
+    <color name="hyperx_switch_thumb_on_pressed_color">@color/hyperx_color_white</color>
+</resources>

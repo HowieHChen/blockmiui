@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hyperx_divider_line">#0dffffff</color>
+
+    <color name="hyperx_switch_track_on">#277af7</color>
+    <color name="hyperx_switch_track_off">#33ffffff</color>
+
+</resources>

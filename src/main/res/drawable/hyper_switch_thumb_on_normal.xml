@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/hyperx_switch_thumb_horizontal_padding_normal"
+        android:top="@dimen/hyperx_switch_thumb_vertical_padding_normal"
+        android:right="@dimen/hyperx_switch_thumb_horizontal_padding_normal"
+        android:bottom="@dimen/hyperx_switch_thumb_vertical_padding_normal">
+        <shape android:shape="oval">
+            <solid android:color="@color/hyperx_switch_thumb_on_normal_color"/>
+            <size
+                android:height="@dimen/hyperx_switch_thumb_size_normal"
+                android:width="@dimen/hyperx_switch_thumb_size_normal"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/hyperx_switch_track_corner_radius"/>
+            <size
+                android:height="@dimen/hyperx_switch_track_height"
+                android:width="@dimen/hyperx_switch_track_width"/>
+            <solid android:color="@color/hyperx_switch_track_off"/>
+        </shape>
+    </item>
+</layer-list>
