@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:id="@+id/checkbox_state_checked"
+        android:drawable="@drawable/hyperx_btn_checkbox_dialog_on_normal" />
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/hyperx_btn_checkbox_dialog_on_disabled" />
+    <item
+        android:state_enabled="true"
+        android:id="@+id/checkbox_state_normal"
+        android:drawable="@drawable/hyperx_btn_checkbox_dialog_off_normal" />
+    <item
+        android:drawable="@drawable/hyperx_btn_checkbox_dialog_off_disabled" />
+    <transition
+        android:drawable="@drawable/hyperx_btn_checkbox_off_to_on"
+        android:toId="@+id/checkbox_state_checked"
+        android:fromId="@+id/checkbox_state_normal" />
+    <transition
+        android:drawable="@drawable/hyperx_btn_checkbox_on_to_off"
+        android:toId="@+id/checkbox_state_normal"
+        android:fromId="@+id/checkbox_state_checked" />
+</animated-selector>

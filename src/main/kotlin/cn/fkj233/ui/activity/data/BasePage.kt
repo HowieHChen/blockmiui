@@ -39,6 +39,47 @@ abstract class BasePage {
         return DataBinding.get(bindingData, defValue, recvCallbacks)
     }
 
+    fun PreferenceCategory(descData: DescData?, categoryData: CategoryData, dataBindingRecv: DataBinding.Binding.Recv? = null, block: (() -> Unit)? = null) {
+        itemList.add(CategoryTitleP(descData, categoryData, dataBindingRecv))
+        block?.let { it() }
+    }
+
+    fun DividerLine(dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(CategoryTitleP(null, CategoryData(hideTitle = true), dataBindingRecv))
+    }
+
+    fun CategoryText(title: String? = null, titleId: Int? = null, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(CategoryTitleP(DescData(title = title, titleId = titleId), CategoryData(hideLine = true), dataBindingRecv))
+    }
+
+    fun DropDownPreference(descData: DescData, dropDownData: DropDownData, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(DropDownP(descData, dropDownData, dataBindingRecv))
+    }
+
+    fun EditTextPreference(descData: DescData, editTextData: EditTextData, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(EditTextP(descData, editTextData, dataBindingRecv))
+    }
+
+    fun HeaderPreference(descData: DescData, headerData: HeaderData, onClickListener: ((View) -> Unit)? = null, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(HeaderP(descData, headerData, onClickListener, dataBindingRecv))
+    }
+
+    fun SeekBarPreference(descData: DescData, seekBarData: SeekBarData, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(SeekBarP(descData, seekBarData, dataBindingRecv))
+    }
+
+    fun SwitchPreference(descData: DescData, switchData: SwitchData, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(SwitchP(descData, switchData, dataBindingRecv))
+    }
+
+    fun TextPreference(descData: DescData, textData: TextData, onClickListener: ((View) -> Unit)? = null, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(TextP(descData, textData, onClickListener, dataBindingRecv))
+    }
+
+    fun FilterSortViewWidget(filterSortViewData: FilterSortViewData, dataBindingRecv: DataBinding.Binding.Recv? = null) {
+        itemList.add(FilterSortViewW(filterSortViewData, dataBindingRecv))
+    }
+
     fun ImageWithText(authorHead: Drawable, authorName: String, authorTips: String? = null, round: Float = 30f, onClickListener: (() -> Unit)? = null, dataBindingRecv: DataBinding.Binding.Recv? = null) {
         itemList.add(ImageTextV(authorHead, authorName, authorTips, round, onClickListener, dataBindingRecv))
     }

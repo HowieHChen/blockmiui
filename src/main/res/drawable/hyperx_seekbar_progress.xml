@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center|fill_horizontal"
+        android:id="@android:id/background"
+        android:drawable="@drawable/hyperx_seekbar_progress_bg" />
+    <item
+        android:gravity="center"
+        android:id="@android:id/icon">
+        <shape android:shape="oval">
+            <solid android:color="@color/hyperx_transparent" />
+            <size
+                android:width="@dimen/hyperx_seekbar_icon_size"
+                android:height="@dimen/hyperx_seekbar_icon_size" />
+        </shape>
+    </item>
+    <item
+        android:gravity="center|fill_horizontal"
+        android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/hyperx_progress_primary_colors" />
+                <corners android:radius="@dimen/hyperx_seekbar_progress_bg_radius" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

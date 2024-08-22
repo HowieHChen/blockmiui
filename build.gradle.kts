@@ -4,31 +4,32 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     namespace = "cn.fkj233.ui"
     defaultConfig {
-        minSdk = 26
+        minSdk = 31
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            setProguardFiles(
-                listOf(
-                    getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
-                )
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.majorVersion
+        jvmTarget = JavaVersion.VERSION_17.majorVersion
     }
 }
 
 dependencies {
     implementation("androidx.annotation:annotation:1.6.0")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.arch.core:core-runtime:2.2.0")
 }

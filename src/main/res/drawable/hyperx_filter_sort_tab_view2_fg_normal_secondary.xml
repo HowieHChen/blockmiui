@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.lackluster.hyperx.widget.internal.FilterSortTabView2ForegroundDrawable xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:activatedAlpha="0.0"
+    app:hoveredActivatedAlpha="0.0"
+    app:hoveredAlpha="0.05"
+    app:normalAlpha="0.0"
+    app:pressedAlpha="0.12"
+    app:tintColor="@color/hyperx_navigator_filter_sort_tab_view2_tint"
+    app:tintRadius="@dimen/hyperx_filter_sort_tab_view2_corner" />

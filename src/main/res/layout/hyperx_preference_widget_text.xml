@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/HyperX.TextAppearance.PreferenceRight"
+    android:ellipsize="marquee"
+    android:gravity="end"
+    android:id="@+id/text_right"
+    android:paddingTop="@dimen/hyperx_preference_text_padding_top"
+    android:paddingBottom="@dimen/hyperx_preference_text_padding_bottom"
+    android:fadingEdge="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/hyperx_preference_widget_layout_max_width"
+    android:maxLines="10" />

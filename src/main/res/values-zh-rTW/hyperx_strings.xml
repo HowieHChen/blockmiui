@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_error_message">輸入內容無效</string>
+    <string name="more">更多</string>
+</resources>

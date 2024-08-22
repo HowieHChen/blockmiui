@@ -21,3 +21,5 @@
 #-renamesourcefileattribute SourceFile
 
 -keep class cn.fkj233.** {*;}
+-keep class dev.lackluster.hyperx.app.AlphaBlendingDrawable*{*;}
+-keep class dev.lackluster.hyperx.** {*;}

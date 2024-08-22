@@ -37,4 +37,6 @@ interface BaseView {
         group.addView(view)
     }
 
+    fun isHyperXView(): Boolean = false
+
 }

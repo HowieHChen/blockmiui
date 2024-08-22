@@ -24,6 +24,7 @@
 
 package cn.fkj233.ui.activity.fragment
 
+import android.animation.LayoutTransition
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.app.Fragment
@@ -33,12 +34,7 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationSet
-import android.view.animation.LinearInterpolator
-import android.view.animation.RotateAnimation
-import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.ScrollView
 import androidx.annotation.Keep
 import cn.fkj233.ui.R
@@ -46,6 +42,8 @@ import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.activity.data.AsyncInit
 import cn.fkj233.ui.activity.dp2px
 import cn.fkj233.ui.activity.view.BaseView
+import dev.lackluster.hyperx.app.ProgressDialog
+import dev.lackluster.hyperx.view.animation.CubicEaseInOutInterpolator
 
 
 @Suppress("MemberVisibilityCanBePrivate")
@@ -75,6 +73,11 @@ class MIUIFragment() : Fragment() {
                 orientation = LinearLayout.VERTICAL
                 background = context.getDrawable(R.color.foreground)
                 itemView = this
+                layoutTransition = LayoutTransition().also {
+                    it.setDuration(200L)
+                    it.setInterpolator(LayoutTransition.CHANGE_APPEARING, CubicEaseInOutInterpolator())
+                    it.setInterpolator(LayoutTransition.CHANGE_DISAPPEARING, CubicEaseInOutInterpolator())
+                }
                 if (async?.skipLoadItem != true) initData()
             })
         }
@@ -97,25 +100,25 @@ class MIUIFragment() : Fragment() {
      */
     fun showLoading() {
         handler.post {
-            dialog = Dialog(MIUIActivity.context, R.style.Translucent_NoTitle).apply {
-                setCancelable(false)
-                setContentView(LinearLayout(context).apply {
-                    layoutParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT)
-                    addView(ImageView(context).apply {
-                        layoutParams = LinearLayout.LayoutParams(dp2px(context, 60f), dp2px(context, 60f)).also { it.setMargins(dp2px(context, 20f), dp2px(context, 20f), dp2px(context, 20f), dp2px(context, 20f)) }
-                        background = context.getDrawable(R.drawable.ic_loading)
-                        startAnimation(AnimationSet(true).apply {
-                            interpolator = LinearInterpolator()
-                            addAnimation(RotateAnimation(0f, +359f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f).apply {
-                                repeatCount = -1
-                                startOffset = 0
-                                duration = 1000
-                            })
-                        })
-                    })
-                })
-            }
-            dialog?.show()
+//            dialog = Dialog(MIUIActivity.context, R.style.Translucent_NoTitle).apply {
+//                setCancelable(false)
+//                setContentView(LinearLayout(context).apply {
+//                    layoutParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT)
+//                    addView(ImageView(context).apply {
+//                        layoutParams = LinearLayout.LayoutParams(dp2px(context, 60f), dp2px(context, 60f)).also { it.setMargins(dp2px(context, 20f), dp2px(context, 20f), dp2px(context, 20f), dp2px(context, 20f)) }
+//                        background = context.getDrawable(R.drawable.ic_loading)
+//                        startAnimation(AnimationSet(true).apply {
+//                            interpolator = LinearInterpolator()
+//                            addAnimation(RotateAnimation(0f, +359f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f).apply {
+//                                repeatCount = -1
+//                                startOffset = 0
+//                                duration = 1000
+//                            })
+//                        })
+//                    })
+//                })
+//            }
+            dialog = ProgressDialog.show(MIUIActivity.context, null, "Loading")
         }
     }
 
@@ -132,12 +135,16 @@ class MIUIFragment() : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     fun addItem(item: BaseView) {
         handler.post {
-            itemView.addView(LinearLayout(MIUIActivity.context).apply { // 控件布局
-                layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                background = context.getDrawable(R.drawable.ic_click_check)
-                setPadding(dp2px(context, 30f), 0, dp2px(context, 30f), 0)
-                item.onDraw(this@MIUIFragment, this, item.create(context, callBacks))
-            })
+            if (item.isHyperXView()) {
+                item.onDraw(this@MIUIFragment, itemView, item.create(MIUIActivity.context, callBacks))
+            } else {
+                itemView.addView(LinearLayout(MIUIActivity.context).apply { // 控件布局
+                    layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                    background = context.getDrawable(R.drawable.ic_click_check)
+                    setPadding(dp2px(context, 30f), 0, dp2px(context, 30f), 0)
+                    item.onDraw(this@MIUIFragment, this, item.create(context, callBacks))
+                })
+            }
         }
     }
 

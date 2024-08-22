@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HyperXTheme">
+        <item name="android:buttonStyle">@style/Widget.Button</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/hyperx_transparent</item>
+        <item name="android:navigationBarColor">@color/hyperx_transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:isLightTheme">true</item>
+
+<!--        <item name="android:autoCompleteTextViewStyle">@style/Widget.AutoCompleteTextView</item>-->
+<!--        <item name="android:ratingBarStyle">@style/Widget.RatingBar</item>-->
+<!--        <item name="android:ratingBarStyleSmall">@style/Widget.RatingBar.Small</item>-->
+<!--        <item name="android:ratingBarStyleIndicator">@style/Widget.RatingBar.Indicator</item>-->
+<!--        -->
+        <item name="android:actionBarSize">@dimen/hyperx_action_bar_default_height</item>
+        <item name="android:actionBarTabStyle">@style/Widget.ActionBar.TabView</item>
+        <item name="android:actionBarTabBarStyle">@style/Widget.ActionBar.TabBar</item>
+        <item name="android:actionBarSplitStyle">@style/Widget.ActionBar.Split</item>
+        <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/Widget.ActionBar.TabText</item>
+        <item name="android:actionBarItemBackground">@android:color/transparent</item>
+        <item name="android:actionButtonStyle">@style/Widget.ActionButton</item>
+        <item name="android:actionModeStyle">@style/Widget.ActionMode</item>
+        <item name="android:actionModeBackground">@drawable/hyperx_action_mode_bg</item>
+        <item name="android:actionModeSplitBackground">@drawable/hyperx_action_bar_split_bg</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+
+<!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+<!--        <item name="android:statusBarColor">@color/hyperx_transparent</item>-->
+<!--        <item name="android:navigationBarColor">@color/hyperx_transparent</item>-->
+        <item name="android:buttonBarPositiveButtonStyle">@style/Widget.Button.Primary</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/Widget.Button</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/Widget.Button</item>
+
+        <item name="android:textColorAlertDialogListItem">@color/hyperx_dialog_list_text</item>
+        <item name="android:textColorHighlight">@color/hyperx_highlighted_text</item>
+        <item name="android:textColorHighlightInverse">@color/hyperx_highlighted_text_inverse</item>
+        <item name="android:textColorHint">@color/hyperx_hint_edit_text_color</item>
+        <item name="android:textColorHintInverse">@color/hyperx_hint_edit_text_color_inverse</item>
+        <item name="android:textColorLink">@color/hyperx_link_text</item>
+        <item name="android:textColorLinkInverse">@color/hyperx_link_text_inverse</item>
+        <item name="android:textColorPrimary">@color/hyperx_text_color_primary</item>
+        <item name="android:textColorSecondary">@color/hyperx_secondary_text</item>
+
+        <item name="android:textAppearanceLarge">@style/HyperX.TextAppearance.Large</item>
+        <item name="android:textAppearanceMedium">@style/HyperX.TextAppearance.Medium</item>
+        <item name="android:textAppearanceSmall">@style/HyperX.TextAppearance.Small</item>
+        <item name="android:titleTextStyle">@style/CollapseTitleStyle</item>
+
+        <item name="android:windowBackground">@drawable/hyperx_window_bg</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:alertDialogStyle">@style/AlertDialog</item>
+        <item name="android:scrollbarThumbVertical">@drawable/hyperx_scrollbar_thumb_vertical</item>
+        <item name="android:checkboxStyle">@style/Widget.CompoundButton.CheckBox</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.ListView</item>
+        <item name="android:editTextStyle">@style/Widget.EditText</item>
+        <item name="android:listViewStyle">@style/Widget.ListView</item>
+        <item name="android:radioButtonStyle">@style/Widget.CompoundButton.RadioButton</item>
+
+        <item name="android:listChoiceIndicatorSingle">@drawable/hyperx_btn_radio_arrow</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/hyperx_btn_checkbox</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.ListPopupWindow</item>
+        <item name="android:listDividerAlertDialog">@null</item>
+
+        <item name="android:dialogTheme">@style/AlertDialog.Theme</item>
+<!--        <item name="android:homeAsUpIndicator">@drawable/miuix_appcompat_action_bar_back_dark</item>-->
+        <item name="android:buttonBarStyle">@style/Widget.ButtonBar</item>
+        <item name="android:buttonBarButtonStyle">@style/Widget.Button</item>
+
+        <item name="android:alertDialogIcon">@null</item>
+        <item name="android:textCursorDrawable">@drawable/hyperx_text_cursor</item>
+
+        <item name="android:listPreferredItemPaddingLeft">@dimen/hyperx_list_preferred_item_padding_left</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/hyperx_list_preferred_item_padding_right</item>
+
+        <item name="actionBarBackground">@drawable/hyperx_action_bar_bg</item>
+
+        <item name="dialogProgressPercentColor">@color/hyperx_color_blue_primary_default</item>
+        <item name="filterSortTabView2Style">@style/Widget.FilterSortTabView2</item>
+        <item name="filterSortView2Style">@style/Widget.FilterSortView2</item>
+        <item name="hyperAlertDialogTheme">@style/AlertDialog.Theme</item>
+        <item name="hyperSpinnerStyle">@style/Widget.Spinner</item>
+        <item name="seekBarStyle">@style/Widget.SeekBar</item>
+        <item name="switchStyle">@style/Widget.Switch</item>
+        <item name="progressBarHorizontalStyle">@style/Widget.ProgressBar.Horizontal</item>
+        <item name="progressBarStyle">@style/Widget.ProgressBar</item>
+        <item name="progressBarStyleSmall">@style/Widget.ProgressBar.Small</item>
+
+<!--        <item name="checkBoxPreferenceStyle">@style/HyperX.Preference.CheckBoxPreference</item>-->
+        <item name="dialogPreferenceStyle">@style/HyperX.Preference.DialogPreference</item>
+        <item name="dropdownPreferenceStyle">@style/HyperX.Preference.DropDown</item>
+        <item name="editTextPreferenceStyle">@style/HyperX.Preference.DialogPreference.EditTextPreference</item>
+        <item name="headerPreferenceStyle">@style/HyperX.Preference.HeaderPreference</item>
+<!--        <item name="radioButtonPreferenceStyle">@style/HyperX.Preference.RadioButtonPreference</item>-->
+        <item name="seekBarPreferenceStyle">@style/HyperX.Preference.SeekBarPreference</item>
+        <item name="switchPreferenceStyle">@style/HyperX.Preference.SwitchPreference</item>
+        <item name="textPreferenceStyle">@style/HyperX.Preference.TextPreference</item>
+
+        <item name="isLightTheme">true</item>
+    </style>
+
+    <style name="HyperXTheme.Light" parent="HyperXTheme">
+
+    </style>
+    <style name="HyperXTheme.Dark" parent="HyperXTheme">
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:isLightTheme">false</item>
+        <item name="isLightTheme">false</item>
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="action_bar_tab_layout_weight">0</integer>
+    <integer name="dialog_enter_duration">300</integer>
+    <integer name="dialog_exit_duration">150</integer>
+    <integer name="hyperx_item_touch_enter_duration">50</integer>
+    <integer name="hyperx_item_touch_exit_duration">150</integer>
+    <integer name="hyperx_anim_switch_track_duration">100</integer>
+</resources>

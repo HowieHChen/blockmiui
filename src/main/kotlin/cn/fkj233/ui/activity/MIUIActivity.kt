@@ -29,15 +29,12 @@ import android.app.Activity
 import android.app.FragmentManager
 import android.content.Context
 import android.content.SharedPreferences
-import android.graphics.Typeface
 import android.os.Bundle
-import android.util.TypedValue
-import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toolbar
 import androidx.annotation.Keep
 import cn.fkj233.ui.R
 import cn.fkj233.ui.activity.annotation.BMMainPage
@@ -49,6 +46,7 @@ import cn.fkj233.ui.activity.data.InitView
 import cn.fkj233.ui.activity.data.SafeSharedPreferences
 import cn.fkj233.ui.activity.fragment.MIUIFragment
 import cn.fkj233.ui.activity.view.BaseView
+import dev.lackluster.hyperx.core.util.EnvStateManager
 
 /**
  * @version: V1.0
@@ -80,59 +78,65 @@ open class MIUIActivity : Activity() {
         lateinit var activity: MIUIActivity
     }
 
-    private val backButton by lazy {
-        ImageView(activity).apply {
-            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).also {
-                it.gravity = Gravity.CENTER_VERTICAL
-                if (isRtl(context))
-                    it.setMargins(dp2px(activity, 5f), 0, 0, 0)
-                else
-                    it.setMargins(0, 0, dp2px(activity, 5f), 0)
-            }
-            background = getDrawable(R.drawable.abc_ic_ab_back_material)
-            visibility = View.GONE
-            setOnClickListener {
-                this@MIUIActivity.onBackPressed()
-            }
-        }
-    }
+//    private val backButton by lazy {
+//        ImageView(activity).apply {
+//            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).also {
+//                it.gravity = Gravity.CENTER_VERTICAL
+////                if (isRtl(context))
+////                    it.setMargins(dp2px(activity, 5f), 0, 0, 0)
+////                else
+////                    it.setMargins(0, 0, dp2px(activity, 5f), 0)
+//            }
+//            setImageResource(R.drawable.miuix_action_icon_back_light)
+//            visibility = View.GONE
+//            setOnClickListener {
+//                this@MIUIActivity.onBackPressed()
+//            }
+//        }
+//    }
 
-    private val menuButton by lazy {
-        ImageView(activity).apply {
-            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).also { it.gravity = Gravity.CENTER_VERTICAL }
-            background = getDrawable(R.drawable.abc_ic_menu_overflow_material)
-            visibility = View.GONE
-            if (isRtl(context))
-                setPadding(dp2px(activity, 25f), 0, 0, 0)
-            else
-                setPadding(0, 0, dp2px(activity, 25f), 0)
-            setOnClickListener {
-                showFragment(if (this@MIUIActivity::initViewData.isInitialized) "Menu" else "__menu__")
-            }
-        }
-    }
+//    private val menuButton by lazy {
+//        ImageView(activity).apply {
+//            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).also { it.gravity = Gravity.CENTER_VERTICAL }
+//            setImageResource(R.drawable.miuix_action_icon_immersion_more_light)
+//            visibility = View.GONE
+////            if (isRtl(context))
+////                setPadding(dp2px(activity, 25f), 0, 0, 0)
+////            else
+////                setPadding(0, 0, dp2px(activity, 25f), 0)
+//            setOnClickListener {
+//                showFragment(if (this@MIUIActivity::initViewData.isInitialized) "Menu" else "__menu__")
+//            }
+//        }
+//    }
 
-    private val titleView by lazy {
-        TextView(activity).apply {
-            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).also {
-                it.gravity = Gravity.CENTER_VERTICAL
-            }
-            gravity = if (isRtl(context)) Gravity.RIGHT else Gravity.LEFT
-            setTextColor(getColor(R.color.whiteText))
-            setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f)
-            paint.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
-        }
-    }
+//    private val titleView by lazy {
+//        TextView(activity).apply {
+//            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).also {
+//                it.gravity = Gravity.CENTER_VERTICAL
+//            }
+//            gravity = if (isRtl(context)) Gravity.RIGHT else Gravity.LEFT
+//            setTextColor(getColor(R.color.whiteText))
+//            setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f)
+//            paint.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+//        }
+//    }
 
-    private var frameLayoutId: Int = -1
-    private val frameLayout by lazy {
-        val mFrameLayout = FrameLayout(activity).apply {
-            layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
-        }
-        frameLayoutId = View.generateViewId()
-        mFrameLayout.id = frameLayoutId
-        mFrameLayout
-    }
+//    private var frameLayoutId: Int = -1
+//    private val frameLayout by lazy {
+//        val mFrameLayout = FrameLayout(activity).apply {
+//            layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
+//        }
+//        frameLayoutId = View.generateViewId()
+//        mFrameLayout.id = frameLayoutId
+//        mFrameLayout
+//    }
+    private var frameLayoutId: Int = R.id.content_frame
+    private var frameLayout: FrameLayout? = null
+    private var actionBar: Toolbar? = null
+    private var backButton: ImageView? = null
+    private var titleView: TextView? = null
+    private var menuButton: ImageView? = null
 
     /**
      *  是否继续加载 / Continue loading
@@ -147,24 +151,46 @@ open class MIUIActivity : Activity() {
     var isExit = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        EnvStateManager.init(this)
         super.onCreate(savedInstanceState)
         context = this
         activity = this
-        actionBar?.hide()
-        setContentView(LinearLayout(activity).apply {
-            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
-            background = getDrawable(R.color.foreground)
-            orientation = LinearLayout.VERTICAL
-            addView(LinearLayout(activity).apply {
-                layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-                setPadding(dp2px(activity, 25f), dp2px(activity, 20f), dp2px(activity, 25f), dp2px(activity, 15f))
-                orientation = LinearLayout.HORIZONTAL
-                addView(backButton)
-                addView(titleView)
-                addView(menuButton)
-            })
-            addView(frameLayout)
-        })
+        // actionBar?.hide()
+        setContentView(R.layout.base_layout)
+        val viewActionBar = findViewById<Toolbar>(R.id.tool_bar)
+        val viewContentFrame = findViewById<FrameLayout>(R.id.content_frame)
+        setActionBar(viewActionBar)
+        frameLayout = viewContentFrame
+        actionBar = viewActionBar
+        backButton = viewActionBar.findViewById(R.id.back_button)
+        titleView = viewActionBar.findViewById(android.R.id.title)
+        menuButton = viewActionBar.findViewById(R.id.menu_button)
+        backButton?.let {
+            it.visibility = View.INVISIBLE
+            it.setOnClickListener {
+                this@MIUIActivity.onBackPressed()
+            }
+        }
+        menuButton?.let {
+            it.visibility = View.INVISIBLE
+            it.setOnClickListener {
+                showFragment(if (this@MIUIActivity::initViewData.isInitialized) "Menu" else "__menu__")
+            }
+        }
+//        setContentView(LinearLayout(activity).apply {
+//            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
+//            background = getDrawable(R.color.foreground)
+//            orientation = LinearLayout.VERTICAL
+//            addView(LinearLayout(activity).apply {
+//                layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+//                // setPadding(dp2px(activity, 25f), dp2px(activity, 20f), dp2px(activity, 25f), dp2px(activity, 15f))
+//                orientation = LinearLayout.HORIZONTAL
+//                addView(backButton)
+//                addView(titleView)
+//                addView(menuButton)
+//            })
+//            addView(frameLayout)
+//        })
         if (savedInstanceState != null) {
             if (this::initViewData.isInitialized) {
                 viewData = InitView(dataList).apply(initViewData)
@@ -224,7 +250,7 @@ open class MIUIActivity : Activity() {
             } else if (basePage.getAnnotation(BMMenuPage::class.java) != null) {
                 val menuPage = basePage.newInstance()
                 menuPage.activity = this
-                menuButton.visibility = View.VISIBLE
+                menuButton?.visibility = View.VISIBLE
                 pageInfo["__menu__"] = menuPage
             } else if (basePage.getAnnotation(BMPage::class.java) != null) {
                 val menuPage = basePage.newInstance()
@@ -242,7 +268,7 @@ open class MIUIActivity : Activity() {
     }
 
     override fun setTitle(title: CharSequence?) {
-        titleView.text = title
+        titleView?.text = title
     }
 
     /**
@@ -281,7 +307,7 @@ open class MIUIActivity : Activity() {
                         else it.setCustomAnimations(R.animator.slide_left_in, R.animator.slide_right_out, R.animator.slide_right_in, R.animator.slide_left_out)
                     }
                 }.replace(frameLayoutId, frame).addToBackStack(key).commit()
-                backButton.visibility = View.VISIBLE
+                backButton?.visibility = View.VISIBLE
                 setMenuShow(dataList[key]?.hideMenu == false)
             } else {
                 setBackupShow(viewData.mainShowBack)
@@ -319,21 +345,21 @@ open class MIUIActivity : Activity() {
     fun setMenuShow(show: Boolean) {
         if (this::initViewData.isInitialized) {
             if (!dataList.containsKey("Menu")) return
-            if (show) menuButton.visibility = View.VISIBLE
-            else menuButton.visibility = View.GONE
+            if (show) menuButton?.visibility = View.VISIBLE
+            else menuButton?.visibility = View.INVISIBLE
             return
         }
         if (pageInfo.containsKey("__menu__")) {
             if (show) {
-                menuButton.visibility = View.VISIBLE
+                menuButton?.visibility = View.VISIBLE
             } else {
-                menuButton.visibility = View.GONE
+                menuButton?.visibility = View.INVISIBLE
             }
         }
     }
 
     fun setBackupShow(show: Boolean) {
-        if (show) backButton.visibility = View.VISIBLE else backButton.visibility = View.GONE
+        if (show) backButton?.visibility = View.VISIBLE else backButton?.visibility = View.INVISIBLE
     }
 
     private fun getPageHideMenu(basePage: BasePage): Boolean {
@@ -411,12 +437,12 @@ open class MIUIActivity : Activity() {
             val name = fragmentManager.getBackStackEntryAt(fragmentManager.backStackEntryCount - 2).name
             when (name) {
                 "Main" -> {
-                    if (!viewData.mainShowBack) backButton.visibility = View.GONE
-                    if (viewData.isMenu) menuButton.visibility = View.VISIBLE
+                    if (!viewData.mainShowBack) backButton?.visibility = View.INVISIBLE
+                    if (viewData.isMenu) menuButton?.visibility = View.VISIBLE
                 }
 
                 "__main__" -> {
-                    if (!pageInfo[name]!!.javaClass.getAnnotation(BMMainPage::class.java)!!.showBack) backButton.visibility = View.GONE
+                    if (!pageInfo[name]!!.javaClass.getAnnotation(BMMainPage::class.java)!!.showBack) backButton?.visibility = View.INVISIBLE
                     setMenuShow(pageInfo.containsKey("__menu__"))
                 }
 

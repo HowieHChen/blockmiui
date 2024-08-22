@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.lackluster.hyperx.app.ButtonForegroundDrawable xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:buttonCapsuleRadius="@dimen/hyperx_capsule_button_bg_corner_radius"
+    app:buttonRadius="@dimen/hyperx_button_bg_corner_radius"
+    app:hoveredAlpha="0.06"
+    app:normalAlpha="0.0"
+    app:pressedAlpha="0.08"
+    app:tintColor="@color/hyperx_tint_color" />

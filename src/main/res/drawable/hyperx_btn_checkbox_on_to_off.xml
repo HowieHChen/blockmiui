@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:height="@dimen/hyperx_check_widget_height"
+            android:width="@dimen/hyperx_check_widget_width"
+            android:viewportWidth="23.0"
+            android:viewportHeight="23.0">
+            <path
+                android:name="arrow"
+                android:pathData="M 5 9.4 L 10.3 14.9 L 17.9 5.1"
+                android:strokeColor="@color/hyperx_dialog_default_checkbox_btn_on_foreground_color"
+                android:strokeWidth="2.0"
+                android:trimPathStart="0.186"
+                android:trimPathEnd="0.803"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeMiterLimit="10.0" />
+        </vector>
+    </aapt:attr>
+    <target
+        android:name="arrow">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:duration="150"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:propertyName="strokeAlpha" />
+        </aapt:attr>
+    </target>
+</animated-vector>

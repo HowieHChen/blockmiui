@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/hyperx_preference_item_padding_start"
+        android:top="@dimen/hyperx_preference_category_divider_gap_height"
+        android:right="@dimen/hyperx_preference_item_padding_end"
+        android:bottom="@dimen/hyperx_preference_category_divider_gap_height">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/hyperx_preference_first_last_divider_line"/>
+            <size android:height="@dimen/hyperx_preference_category_divider_height"/>
+        </shape>
+    </item>
+</layer-list>

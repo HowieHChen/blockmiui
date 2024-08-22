@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fake_action_bar_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/hyperx_action_bar_default_height"
+    android:maxHeight="@dimen/hyperx_action_bar_max_height">
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="@dimen/miuix_theme_title_button_width"
+        android:layout_height="@dimen/miuix_theme_title_button_height"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="@dimen/hyperx_action_bar_horizontal_padding_start"
+        android:src="@drawable/miuix_action_icon_back_light"/>
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        style="@style/CollapseTitleStyle" />
+    <ImageView
+        android:id="@+id/menu_button"
+        android:layout_width="@dimen/miuix_theme_title_button_width"
+        android:layout_height="@dimen/miuix_theme_title_button_height"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="@dimen/hyperx_action_bar_horizontal_padding_end"
+        android:src="@drawable/miuix_action_icon_immersion_more_light"/>
+</FrameLayout>

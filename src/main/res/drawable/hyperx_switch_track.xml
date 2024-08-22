@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@integer/hyperx_anim_switch_track_duration"
+    android:exitFadeDuration="@integer/hyperx_anim_switch_track_duration">
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/hyperx_switch_track_on"/>
+    <item
+        android:state_checked="false"
+        android:drawable="@drawable/hyperx_switch_track_off"/>
+</selector>

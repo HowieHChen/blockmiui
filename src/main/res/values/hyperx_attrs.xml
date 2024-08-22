@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="actionBarBackground" format="reference" />
+    <attr name="actionBarTitleColor" format="reference|color" />
+
+    <attr name="buttonBackground" format="reference" />
+    <attr name="buttonBarPrimaryButtonStyle" format="reference" />
+    <attr name="buttonForeground" format="reference" />
+
+    <attr name="seekBarStyle" format="reference" />
+    <attr name="hyperSpinnerStyle" format="reference" />
+    <attr name="singleLineTitle" format="boolean"/>
+    <attr name="showRightArrow" format="boolean"/>
+    <attr name="iconCornerRadius" format="dimension"/>
+    <attr name="switchStyle" format="reference"/>
+    <attr name="hyperAlertDialogTheme" format="reference"/>
+
+    <attr name="checkBoxButtonCompat" format="reference" />
+    <attr name="checkBoxDrawableTouchAnimEnable" format="boolean" />
+    <attr name="checkBoxOnDrawableBackgroundColor" format="reference|color" />
+    <attr name="checkBoxOnDrawableForegroundColor" format="reference|color" />
+    <attr name="checkWidgetBackgroundDisableAlpha" format="reference|integer" />
+    <attr name="checkWidgetBackgroundNormalAlpha" format="reference|integer" />
+    <attr name="checkWidgetDisableDrawableBackgroundColor" format="reference|color" />
+    <attr name="checkWidgetOnAlphaDrawableBackgroundColor" format="reference|color" />
+    <attr name="checkWidgetStrokeColor" format="reference|color" />
+    <attr name="checkWidgetStrokeDisableAlpha" format="reference|integer" />
+    <attr name="checkWidgetStrokeNormalAlpha" format="reference|integer" />
+    <attr name="checkableButtonTextColorMultiple" format="reference|color" />
+    <attr name="checkableButtonTextColorSingle" format="reference|color" />
+    <attr name="colorDividerLine" format="reference|color" />
+    <attr name="dangerButtonTextColor" format="reference|color" />
+    <attr name="dialogBgColor" format="reference|color" />
+    <attr name="dialogCheckBoxDrawableStart" format="reference" />
+    <attr name="dialogCheckBoxStyle" format="reference"/>
+    <attr name="dialogCheckBoxTextColor" format="reference|color" />
+    <attr name="dialogCommentTextAppearance" format="reference" />
+    <attr name="dialogProgressBarStyle" format="reference" />
+    <attr name="dialogProgressPercentColor" format="reference|color" />
+    <attr name="dialogTitleTextColor" format="reference|color" />
+
+    <attr name="dialogListItemBackground" format="reference"/>
+    <attr name="dialogListPreferredItemHeight" format="dimension" />
+    <attr name="dialogListPreferredItemHeightLarge" format="dimension" />
+    <attr name="dialogListPreferredItemHeightSmall" format="dimension" />
+    <attr name="dialogMultiChoiceListItemBackground" format="reference" />
+    <attr name="dialogMultiChoiceListItemForeground" format="reference" />
+    <attr name="dialogPrimaryTextAppearance" format="reference" />
+
+    <attr name="filterSortView2Style" format="reference" />
+    <attr name="filterSortTabView2Style" format="reference" />
+
+    <attr name="hyperxStateEditTextStyle" format="reference" />
+    <attr name="hyperxDialogRoundWindowBg" format="reference" />
+    <attr name="hyperx_strokeWidth" format="dimension|reference"/>
+    <attr name="hyperx_strokeColor" format="color|reference"/>
+    <attr name="hyperx_useSmooth" format="boolean"/>
+    <attr name="isMiuixFloatingTheme" format="boolean"/>
+    <attr name="isLightTheme" format="boolean" />
+
+    <attr name="indicatorVisibility" format="integer|enum">
+        <enum name="gone" value="0x8" />
+        <enum name="visible" value="0x0" />
+    </attr>
+    <attr name="layoutConfig" format="integer|enum">
+        <enum name="auto_content" value="0" />
+        <enum name="auto_detail" value="1" />
+        <enum name="compact" value="2" />
+        <enum name="wide" value="3" />
+    </attr>
+
+    <attr name="pickerBackgroundColor" format="reference|color" />
+    <attr name="primaryButtonBackground" format="reference" />
+    <attr name="primaryButtonForeground" format="reference" />
+    <attr name="primaryButtonTextColor" format="reference|color" />
+
+    <attr name="progressBarHorizontalStyle" format="reference"/>
+    <attr name="progressBarStyle" format="reference"/>
+    <attr name="progressBarStyleSmall" format="reference"/>
+
+    <attr name="preferenceStyle" format="reference" />
+    <attr name="checkBoxPreferenceStyle" format="reference"/>
+    <attr name="dialogPreferenceStyle" format="reference"/>
+    <attr name="dropdownPreferenceStyle" format="reference"/>
+    <attr name="editTextPreferenceStyle" format="reference"/>
+    <attr name="headerPreferenceStyle" format="reference"/>
+    <attr name="radioButtonPreferenceStyle" format="reference"/>
+    <attr name="seekBarPreferenceStyle" format="reference"/>
+    <attr name="switchPreferenceStyle" format="reference"/>
+    <attr name="textPreferenceStyle" format="reference"/>
+
+    <attr name="radioButtonDrawableTouchAnimEnable" format="boolean" />
+    <attr name="radioButtonOnDrawableBackgroundColor" format="reference|color" />
+    <attr name="radioButtonOnDrawableForegroundColor" format="reference|color" />
+    <attr name="slidingButtonStyle" format="reference" />
+    <attr name="spinnerBackground" format="reference" />
+
+    <attr name="startingWindowOverlay" format="reference" />
+
+    <attr name="state_first_h" format="boolean" />
+    <attr name="state_first_v" format="boolean" />
+    <attr name="state_last_h" format="boolean" />
+    <attr name="state_last_v" format="boolean" />
+    <attr name="state_middle_h" format="boolean" />
+    <attr name="state_middle_v" format="boolean" />
+    <attr name="state_single_h" format="boolean" />
+    <attr name="state_single_v" format="boolean" />
+
+    <attr name="textColorButton" format="reference|color" />
+    <attr name="textColorDialogSingleChoiceItem" format="reference|color" />
+    <attr name="textColorNormal" format="reference|color" />
+    <attr name="textHandleAndCursorColor" format="reference|color" />
+
+    <attr name="primaryButton" format="boolean"/>
+
+    <attr name="windowActionBar" format="boolean" />
+    <attr name="windowActionBarMovable" format="boolean" />
+    <attr name="windowNoTitle" format="boolean" />
+    <attr name="windowTranslucentStatus" format="enum">
+        <enum name="opaque" value="0" />
+        <enum name="transparentDark" value="2" />
+        <enum name="transparentLight" value="1" />
+    </attr>
+
+    <attr name="windowFixedHeightMajor" format="dimension|fraction" />
+    <attr name="windowFixedHeightMinor" format="dimension|fraction" />
+    <attr name="windowFixedWidthMajor" format="dimension|fraction" />
+    <attr name="windowFixedWidthMinor" format="dimension|fraction" />
+    <attr name="windowMaxHeightMajor" format="dimension|fraction" />
+    <attr name="windowMaxHeightMinor" format="dimension|fraction" />
+    <attr name="windowMaxWidthMajor" format="dimension|fraction" />
+    <attr name="windowMaxWidthMinor" format="dimension|fraction" />
+</resources>

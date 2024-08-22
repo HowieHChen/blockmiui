@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:end="@dimen/hyperx_scrollbar_thumb_vertical_padding">
+        <shape>
+            <corners android:radius="@dimen/hyperx_scrollbar_thumb_vertical_radius" />
+            <size android:width="@dimen/hyperx_scrollbar_thumb_vertical_width" />
+            <solid android:color="@color/hyperx_scrollbar_thumb_vertical_bg" />
+        </shape>
+    </item>
+</layer-list>

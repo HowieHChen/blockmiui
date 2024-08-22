@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="drop_down_anim_pivot_x">0.0%</fraction>
+    <fraction name="immersion_menu_anim_pivot_x">100.0%</fraction>
+    <fraction name="hyperx_dialog_min_width_major">42.999996%</fraction>
+    <fraction name="hyperx_dialog_min_width_minor">45.000004%</fraction>
+    <fraction name="hyperx_dialog_max_height_major">90.0%</fraction>
+    <fraction name="hyperx_dialog_max_height_minor">70.00001%</fraction>
+    <fraction name="hyperx_dialog_max_width_major">45.000004%</fraction>
+    <fraction name="hyperx_dialog_max_width_minor">62.0%</fraction>
+</resources>

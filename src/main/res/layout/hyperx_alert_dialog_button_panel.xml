@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.lackluster.hyperx.internal.widget.DialogButtonPanel xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:measureWithLargestChild="true"
+    android:paddingStart="@dimen/hyperx_dialog_button_panel_horizontal_margin"
+    android:paddingEnd="@dimen/hyperx_dialog_button_panel_horizontal_margin"
+    style="@style/Widget.ButtonBar">
+    <dev.lackluster.hyperx.internal.widget.GroupButton
+        android:gravity="center"
+        android:id="@android:id/button2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/hyperx_button_height"
+        android:maxLines="2"
+        android:layout_weight="1.0"
+        style="@style/Widget.Button" />
+    <dev.lackluster.hyperx.internal.widget.GroupButton
+        android:gravity="center"
+        android:id="@android:id/button3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/hyperx_button_height"
+        android:maxLines="2"
+        android:layout_weight="1.0"
+        style="@style/Widget.Button" />
+    <dev.lackluster.hyperx.internal.widget.GroupButton
+        android:gravity="center"
+        android:id="@android:id/button1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/hyperx_button_height"
+        android:maxLines="2"
+        android:layout_weight="1.0"
+        style="@style/Widget.Button.Primary" />
+</dev.lackluster.hyperx.internal.widget.DialogButtonPanel>

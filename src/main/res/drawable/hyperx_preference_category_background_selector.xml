@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:variablePadding="true">
+    <item
+        android:drawable="@drawable/hyperx_preference_category_bg_no_title_no_line"
+        app:state_no_title="true"
+        app:state_no_line="true"/>
+    <item
+        android:drawable="@drawable/hyperx_preference_category_bg_no_title"
+        app:state_no_title="true"/>
+    <item
+        android:drawable="@drawable/hyperx_preference_category_bg_no_line"
+        app:state_no_line="true"/>
+    <item
+        android:drawable="@drawable/hyperx_preference_category_bg"/>
+</selector>

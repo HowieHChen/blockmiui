@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/hyperx_list_preferred_item_padding_left"
+    android:paddingRight="@dimen/hyperx_list_preferred_item_padding_right">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/hyperx_list_item_bg_color" />
+            <size android:height="@dimen/hyperx_list_item_group_header_height" />
+        </shape>
+    </item>
+    <item
+        android:gravity="bottom"
+        android:drawable="@drawable/hyperx_divider_line"
+        android:left="@dimen/hyperx_list_preferred_item_padding_left" />
+    <item android:gravity="bottom|center|left">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/hyperx_list_item_bg_color" />
+            <size
+                android:height="1px"
+                android:width="@dimen/hyperx_list_preferred_item_padding_left" />
+        </shape>
+    </item>
+</layer-list>

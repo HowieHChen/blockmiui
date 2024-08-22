@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.lackluster.hyperx.smooth.SmoothContainerDrawable2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:radius="@dimen/hyperx_edit_text_search_bg_radius">
+    <child>
+        <shape>
+            <size android:height="@dimen/hyperx_edit_text_search_bg_height" />
+            <solid android:color="@color/hyperx_edit_text_search_bg_solid" />
+        </shape>
+    </child>
+</dev.lackluster.hyperx.smooth.SmoothContainerDrawable2>

@@ -1,8 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="hyperx_bright_foreground">#ccffffff</color>
+    <color name="hyperx_bright_foreground_disabled">#4cffffff</color>
+    <color name="hyperx_tint_color">#ffffff</color>
+    <color name="hyperx_primary_color">@color/hyperx_black</color>
+
+    <color name="hyperx_action_bar_subtitle_text">#80ffffff</color>
+    <color name="hyperx_action_bar_tab_text_color_disable">#4dffffff</color>
+    <color name="hyperx_action_bar_tab_text_color_normal">@color/hyperx_color_white_50_no_alpha</color>
+    <color name="hyperx_action_bar_tab_text_color_pressed">#e6ffffff</color>
+    <color name="hyperx_action_bar_tab_text_color_selected">#ccffffff</color>
+
+    <color name="hyperx_action_button_text_color_disable">#66ffffff</color>
+    <color name="hyperx_action_button_text_color_normal">#ccffffff</color>
+    <color name="hyperx_action_button_text_color_pressed">#ccffffff</color>
+    <color name="hyperx_action_button_text_color_selected">#ccffffff</color>
+
+    <color name="hyperx_action_mode_button_text_color_disable">#26ffffff</color>
+    <color name="hyperx_action_mode_button_text_color_normal">#ccffffff</color>
+    <color name="hyperx_action_mode_button_text_color_pressed">#ccffffff</color>
+    <color name="hyperx_action_mode_button_text_color_selected">#ccffffff</color>
+    <color name="hyperx_action_mode_title_text_color">#ccffffff</color>
+
+    <color name="hyperx_checked_text">@color/hyperx_color_blue_dark_primary_default</color>
+
+    <color name="hyperx_color_blue_primary_default">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_color_grey_primary_default">@color/hyperx_color_grey_dark_primary_default</color>
+
+    <color name="hyperx_text_color_primary">#e6ffffff</color>
+
+    <color name="hyperx_action_bar_title_text_color">#ccffffff</color>
+    <color name="hyperx_action_bar_title_text_color_disabled">#72ffffff</color>
+
+    <color name="hyperx_arrow_right_disable_fill_color">#4dffffff</color>
+    <color name="hyperx_arrow_right_normal_fill_color">#66ffffff</color>
+    <color name="hyperx_arrow_right_pressed_fill_color">#66ffffff</color>
+
+    <color name="hyperx_button_bg_color_normal">#26ffffff</color>
+
+    <color name="hyperx_context_menu_item_bg_color_normal">#222224</color>
+    <color name="hyperx_context_menu_item_bg_color_pressed">#14ffffff</color>
+
+    <color name="hyperx_checkbox_btn_disable_background_color">#ffffff</color>
+    <color name="hyperx_dialog_default_comment_text_color">#66ffffff</color>
+    <color name="hyperx_dialog_default_bg_color">#242424</color>
+    <color name="hyperx_dialog_default_button_bg_primary_color_disabled">@color/hyperx_color_blue_dark_primary_disable</color>
+    <color name="hyperx_dialog_default_button_bg_primary_color_normal">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_dialog_default_button_disabled_text">#4dffffff</color>
+    <color name="hyperx_dialog_default_button_text_color">#b3ffffff</color>
+    <color name="hyperx_dialog_default_button_text_color_guide_disabled">#4dffffff</color>
+    <color name="hyperx_dialog_default_button_text_color_guide_normal">#e6ffffff</color>
+    <color name="hyperx_dialog_default_checkbox_btn_on_background_color">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_dialog_default_checkbox_btn_on_foreground_color">#ffffff</color>
+    <color name="hyperx_dialog_default_checkbox_text_color">#ccffffff</color>
+    <color name="hyperx_dialog_default_edit_text_bg_solid">#363636</color>
+    <color name="hyperx_dialog_default_edit_text_dialog_color_normal">#e6ffffff</color>
+    <color name="hyperx_dialog_default_hint_edit_text_color">#4cffffff</color>
+    <color name="hyperx_dialog_default_list_item_bg_dialog_color_checked">#1a277af7</color>
+    <color name="hyperx_dialog_default_list_text_color_disabled">#4dffffff</color>
+    <color name="hyperx_dialog_default_list_text_color_normal">#e6ffffff</color>
+    <color name="hyperx_dialog_default_list_text_color_pressed">#e6ffffff</color>
+    <color name="hyperx_dialog_default_message_text_color">#ccffffff</color>
+    <color name="hyperx_dialog_default_singleChoice_checked_text">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_dialog_default_title_text_color">#e6ffffff</color>
+
+    <color name="hyperx_dim_foreground">#7fffffff</color>
+
+    <color name="hyperx_dropdown_popup_backgroud_color">#222224</color>
+    <color name="hyperx_disabled_text">#4dffffff</color>
     <color name="hyperx_divider_line">#0dffffff</color>
+
+    <color name="hyperx_edit_text_bg_color">#262626</color>
+    <color name="hyperx_edit_text_border_color">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_edit_text_dialog_color_disabled">#4dffffff</color>
+    <color name="hyperx_edit_text_search_bg_solid">#1fffffff</color>
+    <color name="hyperx_edit_text_search_color">#e6ffffff</color>
+    <color name="hyperx_edit_text_search_hint_color">#4cffffff</color>
+
+    <color name="hyperx_filter_sort_arrow_view2_color_activated">#ccffffff</color>
+    <color name="hyperx_filter_sort_arrow_view2_color_normal">#80ffffff</color>
+    <color name="hyperx_filter_sort_arrow_view_color">#ccffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_bg_color_blur_normal">#00000000</color>
+    <color name="hyperx_filter_sort_tab_view2_bg_color_blur_selected">#1fffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_bg_color_normal">#00000000</color>
+    <color name="hyperx_filter_sort_tab_view2_bg_color_selected">#26ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_bg_color_selected_secondary">#1fffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_blur_hovered_activated">#08ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_blur_hovered">#0affffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_blur_pressed">#28ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_hovered_activated">#08ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_hovered_activated_secondary">#08ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_hovered">#12ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_hovered_secondary">#0affffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_pressed">#33ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_fg_pressed_secondary">#28ffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_text_activated">#ccffffff</color>
+    <color name="hyperx_filter_sort_tab_view2_text_normal">#80ffffff</color>
+
+    <color name="hyperx_handle_and_cursor_color">@color/hyperx_color_blue_dark_primary_default</color>
+
+    <color name="hyperx_highlighted_text">#4d277af7</color>
+    <color name="hyperx_highlighted_text_inverse">#263482ff</color>
+    <color name="hyperx_hint_edit_text_color">#4cffffff</color>
+    <color name="hyperx_hint_edit_text_color_inverse">#66000000</color>
+
+    <color name="hyperx_immersion_text_color_disable">#66ffffff</color>
+    <color name="hyperx_immersion_text_color_normal">#e6ffffff</color>
+    <color name="hyperx_immersion_text_color_pressed">#e6ffffff</color>
+    <color name="hyperx_integrated_spinner_text_color_disable">#4dffffff</color>
+    <color name="hyperx_integrated_spinner_text_color_normal">#66ffffff</color>
+
+    <color name="hyperx_link_text">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_link_text_inverse">@color/hyperx_color_blue_light_primary_default</color>
+    <color name="hyperx_list_item_bg_color">@color/hyperx_transparent</color>
+    <color name="hyperx_list_item_bg_color_checked">#14ffffff</color>
+    <color name="hyperx_list_item_bg_color_pressed">#14ffffff</color>
+    <color name="hyperx_list_secondary_text_color_checked">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_list_secondary_text_color_disable">#4dffffff</color>
+    <color name="hyperx_list_secondary_text_color_normal">#73ffffff</color>
+    <color name="hyperx_list_secondary_text_color_pressed">#73ffffff</color>
+    <color name="hyperx_list_text_color_checked">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_list_text_color_disable">#66ffffff</color>
+    <color name="hyperx_list_text_color_normal">#e6ffffff</color>
+    <color name="hyperx_list_text_color_pressed">#e6ffffff</color>
+    <color name="hyperx_list_view_item_group_header_text">#66ffffff</color>
+
+    <color name="hyperx_navigator_filter_sort_tab_view2_tint">#ffffff</color>
+
+    <color name="hyperx_preference_category_text_color">#80ffffff</color>
+
+    <color name="hyperx_preference_list_item_bg_color">@color/hyperx_black</color>
+    <color name="hyperx_preference_item_tint_color">#ffffff</color>
+    <color name="hyperx_preference_first_last_divider_line">#33ffffff</color>
+    <color name="hyperx_preference_primary_text_color">#e6ffffff</color>
+    <color name="hyperx_preference_primary_text_color_disable">#4dffffff</color>
+    <color name="hyperx_preference_right_text_color_disable">#4dffffff</color>
+    <color name="hyperx_preference_right_text_color_normal">#66ffffff</color>
+    <color name="hyperx_preference_secondary_text_color_checked">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_preference_secondary_text_color">#80ffffff</color>
+    <color name="hyperx_preference_secondary_text_color_disable">#4dffffff</color>
+
+    <color name="hyperx_progressBackground">#33ffffff</color>
+    <color name="hyperx_progress_background_icon">#66ffffff</color>
+    <color name="hyperx_progress_disable_color">#14ffffff</color>
+    <color name="hyperx_progress_primary_color">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_progressbar_color">@color/hyperx_color_blue_dark_primary_default</color>
+    <color name="hyperx_progressbar_indeterminate_circle">@color/hyperx_white</color>
+
+    <color name="hyperx_scrollbar_thumb_vertical_bg">#1affffff</color>
 
     <color name="hyperx_switch_track_on">#277af7</color>
     <color name="hyperx_switch_track_off">#33ffffff</color>
 
+    <color name="hyperx_spinner_item_checked_bg_color">@color/hyperx_color_blue_dark_secondary_default</color>
+    <color name="hyperx_spinner_item_normal_bg_color">#242424</color>
+    <color name="hyperx_spinner_dropdown_selector_text_color">#66ffffff</color>
+    <color name="hyperx_spinner_text_color">@color/hyperx_color_grey_dark_primary_default</color>
+    <color name="hyperx_spinner_arrow_color">@color/hyperx_color_grey_dark_primary_default</color>
+
+    <color name="item_touch_color">#cc393939</color>
 </resources>

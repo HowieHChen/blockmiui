@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_spinner_dropdown_view_double_line" type="id"/>
+    <item name="tag_spinner_dropdown_view" type="id"/>
+    <item name="hyperx_animation_tag_init_layout" type="id"/>
+    <item name="titleDividerNoCustom" type="id"/>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@integer/hyperx_item_touch_enter_duration"
+    android:exitFadeDuration="@integer/hyperx_item_touch_exit_duration">
+    <item android:state_focused="true"
+        android:drawable="@color/item_touch_color"/>
+    <item android:state_pressed="true"
+        android:drawable="@color/item_touch_color"/>
+    <item android:state_selected="true"
+        android:drawable="@color/item_touch_color"/>
+    <item
+        android:drawable="@color/hyperx_transparent"/>
+</selector>

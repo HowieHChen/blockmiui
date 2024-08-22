@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="true"
+        android:color="@color/hyperx_dialog_default_list_item_bg_dialog_color_checked" />
+    <item android:color="@color/hyperx_list_item_bg_dialog_color_normal" />
+</selector>

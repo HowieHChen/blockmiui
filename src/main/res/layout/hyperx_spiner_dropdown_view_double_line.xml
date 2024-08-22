@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/hyperx_drop_down_item_icon_width"
+        android:minHeight="@dimen/hyperx_drop_down_item_icon_height"
+        android:layout_marginEnd="@dimen/hyperx_spinner_dropdown_item_icon_margin" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <dev.lackluster.hyperx.widget.CheckedTextView
+            android:textAppearance="@style/HyperX.TextAppearance.List"
+            android:textSize="@dimen/hyperx_spinner_double_line_title_size"
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <dev.lackluster.hyperx.widget.CheckedTextView
+            android:textAppearance="@style/HyperX.TextAppearance.List.Secondary"
+            android:textSize="@dimen/hyperx_spinner_double_line_summary_size"
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hyperx_spinner_dropdown_item_text_margin" />
+    </LinearLayout>
+</LinearLayout>

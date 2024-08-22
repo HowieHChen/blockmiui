@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ActionBar">
+        <attr name="android:background" />
+    </declare-styleable>
+    <declare-styleable name="AdaptRoundButtonDrawable">
+        <attr name="buttonCapsuleRadius" format="float" />
+        <attr name="buttonRadius" format="float" />
+    </declare-styleable>
+    <declare-styleable name="AlertDialog">
+        <attr name="horizontalProgressLayout" format="reference"/>
+        <attr name="layout" format="reference"/>
+        <attr name="listItemLayout" format="reference"/>
+        <attr name="listLayout" format="reference"/>
+        <attr name="multiChoiceItemLayout" format="reference"/>
+        <attr name="progressLayout" format="reference"/>
+        <attr name="showTitle" format="boolean"/>
+        <attr name="singleChoiceItemLayout" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ActionIconDrawable">
+        <attr name="actionIconWidth" format="dimension"/>
+        <attr name="actionIconHeight" format="dimension"/>
+        <attr name="actionIconDisabledAlpha" format="float"/>
+        <attr name="actionIconNormalAlpha" format="float"/>
+        <attr name="actionIconPressedAlpha" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="CheckedTextView">
+        <attr name="android:checkMark"/>
+    </declare-styleable>
+    <declare-styleable name="FilterSortView2">
+        <attr name="android:enabled" />
+        <attr name="filterSortViewBackground" format="reference" />
+        <attr name="layoutConfig" />
+    </declare-styleable>
+    <declare-styleable name="FilterSortTabView2">
+        <attr name="android:text" />
+        <attr name="descending" format="boolean" />
+        <attr name="indicatorVisibility" />
+        <attr name="arrowFilterSortTabView" format="reference" />
+        <attr name="filterSortTabViewBackground" format="reference" />
+        <attr name="filterSortTabViewCoverBg" format="reference" />
+        <attr name="filterSortTabViewCoverBgInBlur" format="reference" />
+        <attr name="filterSortTabViewFollowTouch" format="boolean" />
+        <attr name="filterSortTabViewForeground" format="reference" />
+        <attr name="filterSortTabViewHorizontalPadding" format="dimension" />
+        <attr name="filterSortTabViewTabActivatedTextAppearance" format="reference" />
+        <attr name="filterSortTabViewTabTextAppearance" format="reference" />
+        <attr name="filterSortTabViewTextColor" format="reference|color" />
+        <attr name="filterSortTabViewVerticalPadding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GroupButton">
+        <attr name="primaryButton"/>
+    </declare-styleable>
+
+    <declare-styleable name="HyperXSmoothFrameLayout2">
+        <attr name="android:radius"/>
+        <attr name="android:topLeftRadius"/>
+        <attr name="android:topRightRadius"/>
+        <attr name="android:bottomLeftRadius"/>
+        <attr name="android:bottomRightRadius"/>
+        <attr name="hyperx_strokeWidth"/>
+        <attr name="hyperx_strokeColor"/>
+        <attr name="hyperx_useSmooth"/>
+    </declare-styleable>
+    <declare-styleable name="HyperXSmoothContainerDrawable2">
+        <attr name="android:radius"/>
+        <attr name="android:topLeftRadius"/>
+        <attr name="android:topRightRadius"/>
+        <attr name="android:bottomLeftRadius"/>
+        <attr name="android:bottomRightRadius"/>
+        <attr name="android:layerType" />
+        <attr name="hyperx_strokeWidth"/>
+        <attr name="hyperx_strokeColor"/>
+        <attr name="hyperx_useSmooth"/>
+    </declare-styleable>
+
+    <declare-styleable name="Window">
+        <attr name="windowFixedHeightMajor"/>
+        <attr name="windowFixedHeightMinor"/>
+        <attr name="windowFixedWidthMajor"/>
+        <attr name="windowFixedWidthMinor"/>
+        <attr name="windowMaxHeightMajor"/>
+        <attr name="windowMaxHeightMinor"/>
+        <attr name="windowMaxWidthMajor"/>
+        <attr name="windowMaxWidthMinor"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="indeterminateFramesCount" format="integer"/>
+        <attr name="indeterminateFramesDuration" format="integer" />
+        <attr name="indeterminateProgressStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="StateTransitionDrawable">
+        <attr name="activatedAlpha" format="float"/>
+        <attr name="hoveredActivatedAlpha" format="float"/>
+        <attr name="hoveredAlpha" format="float"/>
+        <attr name="normalAlpha" format="float"/>
+        <attr name="pressedAlpha" format="float"/>
+        <attr name="tintColor" format="color"/>
+        <attr name="tintRadius" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="SeekBar">
+        <attr name="disabledProgressAlpha" format="float"/>
+        <attr name="maxMiddle" format="float"/>
+        <attr name="minMiddle" format="float"/>
+        <attr name="middleEnabled" format="boolean"/>
+        <attr name="foregroundPrimaryColor" format="color"/>
+        <attr name="foregroundPrimaryDisableColor" format="color"/>
+        <attr name="iconPrimaryColor" format="color"/>
+        <attr name="progressBackgroundDrawable" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="Spinner">
+        <attr name="popupTheme" format="reference"/>
+
+        <attr name="dropDownMaxWidth" format="dimension"/>
+        <attr name="dropDownMinWidth" format="dimension"/>
+        <attr name="spinnerModeCompat" format="enum">
+            <enum name="dialog" value="0" />
+            <enum name="dropdown" value="1" />
+        </attr>
+        <attr name="android:prompt"/>
+        <attr name="android:dropDownWidth"/>
+        <attr name="android:popupBackground"/>
+        <attr name="android:entries" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="CategoryTitle">
+        <attr name="android:layout"/>
+        <attr name="android:title"/>
+        <attr name="state_no_title" format="boolean"/>
+        <attr name="state_no_line" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="BasePreference">
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="android:summary"/>
+        <attr name="android:widgetLayout"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+    </declare-styleable>
+    <declare-styleable name="DialogPreference">
+        <attr name="android:layout"/>
+        <attr name="android:widgetLayout"/>
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="android:summary"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+        <attr name="contentLayout" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="DropDownPreference">
+        <attr name="android:layout"/>
+        <attr name="android:widgetLayout"/>
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="android:summary"/>
+        <attr name="android:entries" format="reference"/>
+        <attr name="android:entryValues" format="reference"/>
+        <attr name="entrySummaries" format="reference"/>
+        <attr name="entryIcons" format="reference"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+    </declare-styleable>
+    <declare-styleable name="HeaderPreference">
+        <attr name="android:layout"/>
+        <attr name="android:widgetLayout"/>
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="android:summary"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+        <attr name="largeIcon" format="boolean"/>
+        <attr name="iconCornerRadius"/>
+    </declare-styleable>
+    <declare-styleable name="SeekBarPreference">
+        <attr name="android:layout"/>
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+        <attr name="showSeekBarValue" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="SwitchPreference">
+        <attr name="android:layout"/>
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="android:summary"/>
+        <attr name="android:widgetLayout"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+    </declare-styleable>
+    <declare-styleable name="TextPreference">
+        <attr name="android:layout"/>
+        <attr name="android:widgetLayout"/>
+        <attr name="android:icon"/>
+        <attr name="android:title"/>
+        <attr name="android:summary"/>
+        <attr name="singleLineTitle"/>
+        <attr name="showRightArrow"/>
+    </declare-styleable>
+</resources>

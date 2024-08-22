@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/hyperx_preference_navigation_item_mask_padding_horizontal"
+        android:top="@dimen/hyperx_preference_navigation_item_mask_padding_vertical"
+        android:right="@dimen/hyperx_preference_navigation_item_mask_padding_horizontal"
+        android:bottom="@dimen/hyperx_preference_navigation_item_mask_padding_vertical">
+        <dev.lackluster.hyperx.app.AlphaBlendingDrawable
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:activatedAlpha="0.04"
+            app:hoveredActivatedAlpha="0.09"
+            app:hoveredAlpha="0.03"
+            app:normalAlpha="0.0"
+            app:pressedAlpha="0.12"
+            app:tintColor="@color/hyperx_preference_item_tint_color"
+            app:tintRadius="@dimen/hyperx_preference_navigation_item_mask_radius" />
+    </item>
+</layer-list>
