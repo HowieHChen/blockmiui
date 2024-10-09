@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-    implementation("androidx.annotation:annotation:1.6.0")
+    implementation("androidx.annotation:annotation:1.8.2")
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.arch.core:core-runtime:2.2.0")
 }
